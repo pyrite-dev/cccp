@@ -1,0 +1,3 @@
+INC += -I$(TOP)/misc
+DEPS += $(TOP)/misc/misc.a
+LIBS += $(TOP)/misc/misc.a

@@ -1,0 +1,3 @@
+INC += -I$(TOP)/ow/elf
+DEPS += $(TOP)/ow/elf/ow_elf.a
+LIBS += $(TOP)/ow/elf/ow_elf.a

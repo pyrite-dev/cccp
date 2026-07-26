@@ -1,18 +1,18 @@
 .PHONY: all format clean
-.PHONY: ccc lang cg ie ow
+.PHONY: ccc misc lang cg ie ow
 
 all: ccc
 
 format:
-	clang-format --verbose -i `find ccc lang cg ie ow -name "*.c" -or -name "*.h"`
+	clang-format --verbose -i `find ccc misc lang cg ie ow "(" -name "*.c" -or -name "*.h" ")" -and -not -name "stb_*.h"`
 
-ccc: lang cg ie ow
+ccc: misc lang cg ie ow
 	cd $@ && $(MAKE) all
 
-lang cg ie ow:
+misc lang cg ie ow:
 	cd $@ && $(MAKE) all
 
 clean:
-	for i in ccc lang cg ie ow; do \
+	for i in ccc misc lang cg ie ow; do \
 		( cd $$i && $(MAKE) clean ) ; \
 	done

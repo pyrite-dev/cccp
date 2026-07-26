@@ -5,7 +5,7 @@ $(NAME)$(EXEC): $(OBJS) $(DEPS)
 	$(CC) $(LDFLAGS) $@ $(OBJS) $(LIBS)
 
 .c.o:
-	$(CC) $(CFLAGS) $@ $<
+	$(CC) $(INC) $(CFLAGS) $@ $<
 
 clean:
 	rm -f *.o $(NAME) $(NAME).exe $(NAME).a

@@ -1,4 +1,4 @@
-#include "ccc.h"
+#include "misc.h"
 
 int cmd_option(int argc, char** argv, cmd_command_t* commands) {
 	int i;
