@@ -1,0 +1,6 @@
+include $(TOP)/mk/prelude.mk
+
+NAME = ow_$(OBJW)
+all: $(NAME).a
+
+include $(TOP)/mk/rules.mk

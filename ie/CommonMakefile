@@ -1,0 +1,6 @@
+include $(TOP)/mk/prelude.mk
+
+NAME = ie_$(ARCH)
+all: $(NAME).a
+
+include $(TOP)/mk/rules.mk

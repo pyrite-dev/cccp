@@ -1,0 +1,45 @@
+digraph {
+	graph [
+		rankdir = LR
+		label = "unCommon Compiler Collection Project"
+	]
+	node [
+		shape = box
+	]
+
+	bcpl [label = "BCPL"]
+	bliss [label = "BLISS"]
+	pli [label = "PL/I"]
+	fortran [label = "FORTRAN"]
+	forth [label = "Forth"]
+	cobol [label = "COBOL"]
+	lisp [label = "Lisp"]
+	rexx [label = "REXX"]
+
+	frontend [label = "Front End"]
+
+	lowering [label = "Language-specific Lowering"]
+
+	ir [label = "Comon Tree IR"]
+
+	codegen [label = "Code Generator"]
+
+	instenc [label = "Instruction Encoder"]
+
+	x86 [label = "x86"]
+	x86_64 [label = "x86_64"]
+	arm [label = "ARM"]
+	aarch64 [label = "AArch64"]
+	m68k [label = "m68k"]
+	vax [label = "VAX"]
+	pdp11 [label = "PDP-11"]
+	riscv [label = "RISC-V"]
+
+	objwriter [label = "Object Writer"]
+
+	elf [label = "ELF"]
+	coff [label = "COFF"]
+	omf [label = "OMF"]
+
+	{bcpl bliss pli forth fortran cobol lisp rexx} -> frontend -> lowering -> ir -> codegen -> instenc -> {x86 x86_64 arm aarch64 m68k vax pdp11 riscv} -> objwriter -> {elf coff omf}
+}
