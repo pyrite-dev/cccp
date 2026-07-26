@@ -1,9 +1,14 @@
 #include "ccc.h"
 
 static int help(const char* flag, const char* option) {
+	char pad[16];
+
 	printf("unCommon Compiler Collection Project %s - Copyright (C) 2026 Pyrite\n", VERSION);
 	printf("Usaqge: ccc [options...] input(s)...\n");
 	printf("General options:\n");
+
+	str_padright(pad, "-h", 8);
+	printf("  %s show this help\n", pad);
 
 	return 0;
 }

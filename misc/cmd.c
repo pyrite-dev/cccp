@@ -11,9 +11,10 @@ int cmd_option(int argc, char** argv, cmd_command_t* commands) {
 			const char* arg	   = NULL;
 			int	    cmdlen = strlen(commands[j].command);
 			int	    arglen = strlen(argv[i] + 1);
+			int	    old	   = i;
 
 			if(argv[i][0] != '-') {
-				fprintf(stderr, "%s: invalid argument\n", argv[0]);
+				fprintf(stderr, "%s: %s: invalid argument\n", argv[0], argv[i]);
 
 				return 1;
 			}
@@ -38,7 +39,7 @@ int cmd_option(int argc, char** argv, cmd_command_t* commands) {
 				int st;
 
 				if(arg == NULL && commands[j].option) {
-					fprintf(stderr, "%s: missing argument\n", argv[0]);
+					fprintf(stderr, "%s: %s: missing argument\n", argv[0], argv[i]);
 
 					return 1;
 				}
@@ -50,7 +51,7 @@ int cmd_option(int argc, char** argv, cmd_command_t* commands) {
 		}
 
 		if(r == NULL) {
-			fprintf(stderr, "%s: invalid argument\n", argv[0]);
+			fprintf(stderr, "%s: %s: invalid argument\n", argv[0], argv[i]);
 
 			return 1;
 		}

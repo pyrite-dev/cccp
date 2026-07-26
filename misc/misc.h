@@ -17,4 +17,8 @@ struct cmd_command {
 /* cmd.c */
 int cmd_option(int argc, char** argv, cmd_command_t* commands);
 
+/* str.c */
+void str_padleft(char* out, const char* in, int len);
+void str_padright(char* out, const char* in, int len);
+
 #endif
