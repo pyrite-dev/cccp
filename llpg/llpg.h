@@ -1,5 +1,5 @@
-#ifndef __CCC_H__
-#define __CCC_H__
+#ifndef __LLPG_H__
+#define __LLPG_H__
 
 #include "../config.h"
 

@@ -1,7 +1,7 @@
 #include "ccc.h"
 
 static int version(const char* argv0, const char* flag, const char* option) {
-	printf("unCommon Compiler Collection Project %s - Copyright (C) 2026 Pyrite\n", VERSION);
+	printf("%s\n", COPYRIGHT("Compiler", CCC_VERSION));
 
 	return 0;
 }
@@ -53,11 +53,12 @@ static cmd_command_t commands[] = {
     {NULL, 0, NULL}};
 
 static int input(const char* argv0, const char* flag, const char* option) {
+	printf("%s\n", strrchr(option, '.'));
+
 	return -1;
 }
 
 int main(int argc, char** argv) {
-	int i;
 	int st;
 
 	if(argc == 1) {
