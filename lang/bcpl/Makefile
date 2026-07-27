@@ -1,4 +1,4 @@
 TOP = ../..
-LANG = forth
+LANG = bcpl
 
 include $(TOP)/lang/CommonMakefile

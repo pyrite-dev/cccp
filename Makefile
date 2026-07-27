@@ -4,7 +4,7 @@
 all: ccc
 
 format:
-	clang-format --verbose -i `find ccc misc lang cg ie ow "(" -name "*.c" -or -name "*.h" ")" -and -not -name "stb_*.h"`
+	clang-format --verbose -i `find ccc cominc misc lang cg ie ow "(" -name "*.c" -or -name "*.h" ")" -and -not -name "stb_*.h"`
 
 ccc: misc lang cg ie ow
 	cd $@ && $(MAKE) all

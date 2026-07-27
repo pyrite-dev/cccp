@@ -1,3 +1,0 @@
-INC += -I$(TOP)/lang/forth
-DEPS += $(TOP)/lang/forth/lang_forth.a
-LIBS += $(TOP)/lang/forth/lang_forth.a

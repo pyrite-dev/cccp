@@ -1,0 +1,3 @@
+INC += -I$(TOP)/lang/bcpl
+DEPS += $(TOP)/lang/bcpl/lang_bcpl.a
+LIBS += $(TOP)/lang/bcpl/lang_bcpl.a
