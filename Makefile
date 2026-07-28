@@ -1,12 +1,12 @@
 .PHONY: all format clean
-.PHONY: llpg ccc misc lang cg ie ow
+.PHONY: pargen ccc misc lang cg ie ow
 
-all: llpg ccc
+all: pargen ccc
 
 format:
-	clang-format --verbose -i `find ccc llpg cominc misc lang cg ie ow "(" -name "*.c" -or -name "*.h" ")" -and -not -name "stb_*.h"`
+	clang-format --verbose -i `find ccc pargen cominc misc lang cg ie ow "(" -name "*.c" -or -name "*.h" ")" -and -not -name "stb_*.h"`
 
-llpg: misc
+pargen: misc
 	cd $@ && $(MAKE) all
 
 ccc: misc lang cg ie ow
@@ -16,6 +16,6 @@ misc lang cg ie ow:
 	cd $@ && $(MAKE) all
 
 clean:
-	for i in ccc llpg misc lang cg ie ow; do \
+	for i in ccc pargen misc lang cg ie ow; do \
 		( cd $$i && $(MAKE) clean ) ; \
 	done

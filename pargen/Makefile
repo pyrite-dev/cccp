@@ -2,7 +2,7 @@ TOP = ..
 
 include $(TOP)/mk/prelude.mk
 
-NAME = llpg
+NAME = pargen
 all: $(NAME)$(EXEC)
 
 OBJS = main.o

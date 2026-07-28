@@ -1,7 +1,7 @@
-#include "llpg.h"
+#include "pargen.h"
 
 static int version(const char* argv0, const char* flag, const char* option) {
-	printf("%s\n", COPYRIGHT("Parser Generator", LLPG_VERSION));
+	printf("%s\n", COPYRIGHT("Parser Generator", PARGEN_VERSION));
 
 	return 0;
 }
@@ -16,9 +16,21 @@ static int help(const char* argv0, const char* flag, const char* option) {
 
 static cmd_command_t commands[] = {
     {"v", 0, version},
+    {"h", 0, help},
     {NULL, 0, NULL}};
 
+static FILE** files = NULL;
+
 static int input(const char* argv0, const char* flag, const char* option) {
+	FILE* f;
+
+	if((f = fopen(option, "r")) == NULL) {
+		fprintf(stderr, "%s: cannot open file `%s'\n", argv0, option);
+		return 1;
+	}
+
+	arrput(files, f);
+
 	return -1;
 }
 

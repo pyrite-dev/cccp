@@ -1,5 +1,5 @@
-#ifndef __LLPG_H__
-#define __LLPG_H__
+#ifndef __PARGEN_H__
+#define __PARGEN_H__
 
 #include "../config.h"
 

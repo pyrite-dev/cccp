@@ -14,6 +14,6 @@ struct _ILanguage {
 	struct _ILanguageVtbl* lpVtbl;
 };
 
-#define ILanguage_Compile(self, input) ((ILanguageFrontEnd*)(self))->Compile((self), (input))
+#define ILanguage_Compile(self, input) ((ILanguageFrontEnd*)(self))->Compile((ILanguageFrontEnd*)(self), (input))
 
 #endif
