@@ -6,7 +6,4 @@
 #define CCC_PART "Compiler"
 #define CCC_VERSION "0.0"
 
-#define PARGEN_PART "Parser Generator"
-#define PARGEN_VERSION "0.0"
-
 #endif
