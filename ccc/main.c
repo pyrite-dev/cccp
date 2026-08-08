@@ -1,7 +1,7 @@
 #include "ccc.h"
 
 static int version(const char* argv0, const char* flag, const char* option) {
-	printf("%s\n", COPYRIGHT("Compiler", CCC_VERSION));
+	printf("%s\n", COPYRIGHT(CCC_PART, CCC_VERSION));
 
 	return 0;
 }
@@ -11,7 +11,7 @@ static int help(const char* argv0, const char* flag, const char* option) {
 
 	version(argv0, flag, option);
 
-	printf("Usaqge: %s [options...] input(s)...\n", argv0);
+	printf("Usage: %s [options...] input(s)...\n", argv0);
 	printf("General options:\n");
 
 	str_padright(pad, "-v", 16);
